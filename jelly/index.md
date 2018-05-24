@@ -2,6 +2,12 @@
 
 esolang [Jelly](https://github.com/DennisMitchell/jellylanguage) (LICENSE: [MIT](https://github.com/DennisMitchell/jellylanguage/blob/master/LICENSE.txt)) の [wiki](https://github.com/DennisMitchell/jellylanguage/wiki) の要約
 
+- ₀₁₂₊ はこのmd中では零項、単項、二項、マクロを表す注釈。プログラム中には含めない。
+
+## index
+- [index.md](https://github.com/akouryy/esolang-memo/blob/master/jelly/index.md) 本家wikiの要約
+- [tips.md](https://github.com/akouryy/esolang-memo/blob/master/jelly/tips.md) 言語仕様を理解するつもりがない場合や時間がないとき用の細かい知見
+
 ## 関数(`link`)
 
 - Jellyの関数は、既存の関数を[ポイントフリー](http://d.hatena.ne.jp/melpon/20111031/1320024473)に合成(`chain`: 連鎖)することで作成される。
@@ -15,7 +21,7 @@ esolang [Jelly](https://github.com/DennisMitchell/jellylanguage) (LICENSE: [MIT]
   - ゴルフではmain関数しかない場合が多いが、その場合でも下の連鎖の章は深く理解する必要がある。
 - 関数を呼び出す際に引数の数を指定する(項数によって関数を呼び出す文字が異なる)。
 - 関数は「1つ上/下の関数」や「n番目の関数」を表すマクロ(`quick`)で参照し、呼び出す。
-  - [`¢`, `Ŀ`](https://github.com/DennisMitchell/jellylanguage/wiki/Quicks) など。
+  - [`¢`₊, `Ŀ`₊](https://github.com/DennisMitchell/jellylanguage/wiki/Quicks) など。
 
 ## リテラル
 
@@ -42,6 +48,7 @@ esolang [Jelly](https://github.com/DennisMitchell/jellylanguage) (LICENSE: [MIT]
       - `02` に適合するとき、`P₀ Q₂ v`。
       - `2` に適合するとき、`v P₂ a`。
       - `1` に適合するとき、`P₁(v)`。
+      - `0` に適合するとき、`P₀`。副作用として元の `v` を出力する。
 
 ### 二項鎖 (`dyadic chain`)
 
@@ -60,6 +67,7 @@ esolang [Jelly](https://github.com/DennisMitchell/jellylanguage) (LICENSE: [MIT]
       - `02` に適合するとき、`P₀ Q₂ v`。
       - `2` に適合するとき、`v P₂ y`。
       - `1` に適合するとき、`P₁(v)`。
+      - `0` に適合するとき、`P₀`。副作用として元の `v` を出力する。
 
 ## 連鎖のネスト
 
