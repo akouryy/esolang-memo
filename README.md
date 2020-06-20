@@ -2,4 +2,6 @@
 
 ## index
 
-- [Jelly](https://github.com/akouryy/esolang-memo/blob/master/jelly/index.md)
+- [dc(1)](dc.md)
+- [Haskell](haskell/monads.md)
+- [Jelly](jelly/index.md)
